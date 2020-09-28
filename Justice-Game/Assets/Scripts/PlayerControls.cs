@@ -51,13 +51,13 @@ public class PlayerControls : MonoBehaviour
         {
             // win screen
             Debug.Log("congrats, you won");
-            Manager.instance.GameOver(1);
+            Manager.instance.GameOver(Manager.WIN);
         }
 
         if (lives == 0)
         {
             // lose screen
-            Manager.instance.GameOver(0);
+            Manager.instance.GameOver(Manager.LOSE);
         }
 
         if (health <= 0)

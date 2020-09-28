@@ -2150,6 +2150,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathFloor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5812859746974549093, guid: 85749d64807ba4a61a4366d899f1125c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812859746974549093, guid: 85749d64807ba4a61a4366d899f1125c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812859746974549093, guid: 85749d64807ba4a61a4366d899f1125c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812859746974549093, guid: 85749d64807ba4a61a4366d899f1125c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5901312563959316582, guid: 85749d64807ba4a61a4366d899f1125c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -2194,7 +2210,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5812859746974549093, guid: 85749d64807ba4a61a4366d899f1125c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 85749d64807ba4a61a4366d899f1125c, type: 3}
 --- !u!1001 &304147864448934579
 PrefabInstance:
@@ -2252,13 +2269,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 304147865477834005, guid: 716813b04dff4f34eb5f8075e6940fec, type: 3}
+      propertyPath: m_Sprites.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 304147865477834005, guid: 716813b04dff4f34eb5f8075e6940fec, type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: 8fde43e67ffda49e6a34d3ca56afdb32, type: 3}
     - target: {fileID: 304147865477834005, guid: 716813b04dff4f34eb5f8075e6940fec, type: 3}
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 304147865477834005, guid: 716813b04dff4f34eb5f8075e6940fec, type: 3}
+      propertyPath: m_Sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716813b04dff4f34eb5f8075e6940fec, type: 3}
 --- !u!1001 &474139926787858696

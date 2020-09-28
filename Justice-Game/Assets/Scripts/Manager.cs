@@ -40,6 +40,7 @@ public class Manager : MonoBehaviour
     {
         // do other things to reset the game
         isGameOver = false;
+        isWin = false;
         SceneManager.UnloadSceneAsync("GameOverScene");
         SceneManager.LoadScene("SampleScene");
     }

@@ -89,7 +89,7 @@ public class PlatformGenerator : MonoBehaviour
 
         // add a victim to the platform at the left end, add a boss to the platform at the right end
         if (direction == LEFT)
-            Instantiate(victim, new Vector3(endVector.x, endVector.y - scale, endVector.z), Quaternion.identity);
+            Instantiate(victim, new Vector3(endVector.x - 7, endVector.y - scale + 0.25f, endVector.z), Quaternion.identity);
         else
             Instantiate(boss, new Vector3(endVector.x, endVector.y - scale, endVector.z), Quaternion.identity);
     }
