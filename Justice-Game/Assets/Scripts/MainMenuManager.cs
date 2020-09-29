@@ -10,9 +10,12 @@ public class MainMenuManager : MonoBehaviour
     public Text titleText;
     public Text titleTextShadow;
     public Text startButtonText;
+    public GameObject mainPanel;
+    public GameObject infoPanel;
     void Awake()
     {
         titleTextShadow.text = titleText.text;
+        HideInfoScreen();
     }
     void Update()
     {
@@ -27,5 +30,14 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+    public void ShowInfoScreen()
+    {
+        infoPanel.gameObject.SetActive(true);
+    }
+
+    public void HideInfoScreen()
+    {
+        infoPanel.gameObject.SetActive(false);
     }
 }
