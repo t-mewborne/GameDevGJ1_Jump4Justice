@@ -29,14 +29,14 @@ public class PlatformGenerator : MonoBehaviour
         freq = xSpread / 8f;
 
         // Generate down-right paths
-        GenerateSpecialPath(RIGHT, -0.5f, Random.value * scale);
         GeneratePath(RIGHT, -0.25f, Random.value * scale);
         GeneratePath(RIGHT, -0.8f, Random.value * scale);
+        GenerateSpecialPath(RIGHT, -0.5f, Random.value * scale);
 
         // Generate up-left paths
-        GenerateSpecialPath(LEFT, -0.5f, Random.value * scale);
         GeneratePath(LEFT, -0.25f, Random.value * scale);
         GeneratePath(LEFT, -0.8f, Random.value * scale);
+        GenerateSpecialPath(LEFT, -0.5f, Random.value * scale);
     }
 
     // generate a random path up to 'xSpread' horizontal units away from the origin
@@ -60,6 +60,7 @@ public class PlatformGenerator : MonoBehaviour
                 float vecX = x + (width / 2.0f);
                 float vecY = startY + (y * scale) + slope*x;
                 platformVector = new Vector3(vecX, vecY, 0);
+                platformVector = DeOverlapPosition(platformVector, width);
 
                 Quaternion rotation = Quaternion.identity;
                 // rotate the boxes by a random amount for variety
@@ -85,12 +86,28 @@ public class PlatformGenerator : MonoBehaviour
     private void GenerateSpecialPath(int direction, float slope, float seed)
     {
         Vector3 endVector = GeneratePath(direction, slope, seed);
+        endVector = DeOverlapPosition(endVector, specialPlatform.GetComponent<Renderer>().bounds.size.x / 2);
         instantiatedPlatforms.Add(Instantiate(specialPlatform, new Vector3(endVector.x, endVector.y - scale, endVector.z), Quaternion.identity));
 
         // add a victim to the platform at the left end, add a boss to the platform at the right end
         if (direction == LEFT)
-            Instantiate(victim, new Vector3(endVector.x - 7, endVector.y - scale + 0.25f, endVector.z), Quaternion.identity);
+            Instantiate(victim, new Vector3(endVector.x - 5, endVector.y - scale + 0.65f, endVector.z), Quaternion.identity);
         else
-            Instantiate(boss, new Vector3(endVector.x, endVector.y - scale, endVector.z), Quaternion.identity);
+            Instantiate(boss, new Vector3(endVector.x + 1.5f, endVector.y - scale + boss.GetComponent<SpriteRenderer>().bounds.size.y / 2, endVector.z), Quaternion.identity);
+    }
+
+    // given a vector and a radius, returns an adjusted vector that is not
+    // within the given radius of any other instantiated platforms
+    private Vector3 DeOverlapPosition(Vector3 pos, float radius)
+    {
+        Vector3 newPos = pos;
+        foreach (var platform in instantiatedPlatforms)
+        {
+            while (Vector3.Distance(platform.transform.position, newPos) < radius)
+            {
+                newPos = newPos + new Vector3(Random.value, 1, 0) * radius;
+            }
+        }
+        return newPos;
     }
 }

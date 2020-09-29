@@ -43,7 +43,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -76,11 +76,19 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 0.13333334, g: 0.23137257, b: 0.32941177, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: 8fde43e67ffda49e6a34d3ca56afdb32, type: 3}
+  m_Sprites:
+  - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -2, y: -0.50000006, z: 0}
-    m_Extent: {x: 6, y: 0.50000006, z: 0}
+    m_Center: {x: -0.21352863, y: 0.0033507347, z: 0}
+    m_Extent: {x: 6, y: 0.5000001, z: 0}
 --- !u!114 &304147865477834006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +104,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: -6, y: -1, z: 0}
+    - position: {x: -4.2135286, y: -0.49664932, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -106,7 +114,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -8, y: 0, z: 0}
+    - position: {x: -6.2135286, y: 0.50335085, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -116,7 +124,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -6, y: 0, z: 0}
+    - position: {x: -4.2135286, y: 0.50335085, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -126,7 +134,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -4.0320206, y: -0.62190306, z: 0}
+    - position: {x: -2.2455494, y: -0.11855233, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -136,7 +144,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 0.02095458, y: -0.63042074, z: 0}
+    - position: {x: 1.8074255, y: -0.12706995, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -146,7 +154,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 2, y: 0, z: 0}
+    - position: {x: 3.786471, y: 0.50335085, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -156,7 +164,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 4, y: 0, z: 0}
+    - position: {x: 5.7864714, y: 0.50335085, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -166,7 +174,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 2, y: -1, z: 0}
+    - position: {x: 3.786471, y: -0.49664932, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -216,14 +224,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -6, y: -1}
-      - {x: -8, y: 0}
-      - {x: -6, y: 0}
-      - {x: -4.0320206, y: -0.62190306}
-      - {x: 0.02095458, y: -0.63042074}
-      - {x: 2, y: 0}
-      - {x: 4, y: 0}
-      - {x: 2, y: -1}
-      - {x: -5.6112595, y: -1}
-      - {x: -5.8980737, y: -1}
-      - {x: -6, y: -1}
+    - - {x: -4.2135286, y: -0.49664932}
+      - {x: -6.2135286, y: 0.50335085}
+      - {x: -4.2135286, y: 0.50335085}
+      - {x: -2.2455494, y: -0.11855233}
+      - {x: 1.8074255, y: -0.12706995}
+      - {x: 3.786471, y: 0.50335085}
+      - {x: 5.7864714, y: 0.50335085}
+      - {x: 3.786471, y: -0.49664932}
+      - {x: -3.824788, y: -0.49664932}
+      - {x: -4.111603, y: -0.49664932}
+      - {x: -4.2135286, y: -0.49664932}
